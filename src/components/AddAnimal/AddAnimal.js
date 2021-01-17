@@ -8,13 +8,22 @@ const AddAnimal = () => {
     const [type, setType] = useState(animalTypes[0]);
     const [bio, setBio] = useState('');
     const [asleep, setAsleep] = useState(false);
-    const [errors, setErrors] = useState([])
+    const [errors, setErrors] = useState([]);
     const history = useHistory();
 
     useEffect(() => {
-        
-
-     },[name, bio])
+        const newErrors = [];
+        if (name.length < 2) {
+            newErrors.push('Name should be longer');
+        }
+        if (bio.length < 10) {
+            newErrors.push('Bio should be longer');
+        }
+        if (bio.length > 20) {
+            newErrors.push('Bio should be shorter');
+        }
+        setErrors(newErrors);
+    }, [name, bio]);
 
     const handleSubmit = (e) => {
         e.preventDefault();
@@ -34,6 +43,11 @@ const AddAnimal = () => {
     return (
         <>
             <h1>Add Animal</h1>
+            <ul>
+                {errors.map((error) => (
+                    <li key={error}>{error}</li>
+                ))}
+            </ul>
             <form onSubmit={handleSubmit}>
                 <label>
                     Name:
