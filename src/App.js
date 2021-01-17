@@ -1,8 +1,13 @@
 import AllAnimals from './components/AllAnimals';
+import { Switch, Route } from 'react-router-dom';
 function App() {
     return (
         <>
-            <AllAnimals />
+            <Switch>
+                <Route exact path='/'>
+                    <AllAnimals />
+                </Route>
+            </Switch>
         </>
     );
 }

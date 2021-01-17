@@ -4,9 +4,9 @@
 
 Let's make a zoo app that....
 
-1. Shows a list of all of the animals at /animals
-2. Shows a list of a certain type of animal at /animal/:animalType
-3. Allows us to add an animal at /animal/add
+1. Shows a list of all of the animals at /
+2. Shows a list of a certain type of animal at /:animalType
+3. Allows us to add an animal at /add
 
 This app should...
 
@@ -26,3 +26,6 @@ This app should...
 3. h1 of 'All Animals'
 4. Loop through the animals to display them on the page.
 5. Render component on app at route /animals
+
+### Context
+
