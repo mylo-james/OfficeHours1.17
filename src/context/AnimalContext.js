@@ -9,11 +9,13 @@ import { createContext } from 'react';
 
 const animalContext = createContext();
 
-const AnimalContextProvider = () => { 
-{/* 
+const AnimalContextProvider = () => {
+    {
+        /* 
     animalContext.provider
-    give access to it's children
-*/}
-}
+    give access to its children
+*/
+    }
+};
 
-export default AnimalContextProvider
+export default AnimalContextProvider;
