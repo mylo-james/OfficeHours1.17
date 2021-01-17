@@ -1,6 +1,8 @@
-import { animals } from '../../data/animals';
+import { useAnimals } from '../../context/AnimalContext';
+
 const AllAnimals = () => {
-    console.log(animals);
+    const animalInfo = useAnimals();
+    console.log(animalInfo);
     return (
         <>
             <h1>All Animals</h1>
@@ -12,7 +14,7 @@ const AllAnimals = () => {
                   if asleep p of asleep else p of awake
             */}
             <ul>
-                {animals.map((animal) => {
+                {animalInfo.animals.map((animal) => {
                     return (
                         <li key={`${animal.name}-${animal.type}`}>
                             <h3>{animal.name}</h3>

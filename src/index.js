@@ -3,11 +3,14 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import { BrowserRouter } from 'react-router-dom';
+import AnimalContextProvider from './context/AnimalContext';
 
 ReactDOM.render(
     <React.StrictMode>
         <BrowserRouter>
-            <App />
+            <AnimalContextProvider>
+                <App />
+            </AnimalContextProvider>
         </BrowserRouter>
     </React.StrictMode>,
     document.getElementById('root')
