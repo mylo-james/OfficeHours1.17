@@ -85,7 +85,7 @@ const AddAnimal = () => {
                         checked={asleep}
                     />
                 </label>
-                <button type='submit'>Submit</button>
+                <button disabled={!!errors.length} type='submit'>Submit</button>
             </form>
         </>
     );

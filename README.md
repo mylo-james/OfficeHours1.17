@@ -5,8 +5,8 @@
 Let's make a zoo app that....
 
 1. Shows a list of all of the animals at /
- <!-- 2. Shows a list of a certain type of animal at /:animalType -->
 2. Allows us to add an animal at /add
+ <!-- 2. Shows a list of a certain type of animal at /:animalType -->
 
 This app should...
 
