@@ -5,8 +5,8 @@
 Let's make a zoo app that....
 
 1. Shows a list of all of the animals at /
-2. Shows a list of a certain type of animal at /:animalType
-3. Allows us to add an animal at /add
+ <!-- 2. Shows a list of a certain type of animal at /:animalType -->
+2. Allows us to add an animal at /add
 
 This app should...
 
@@ -28,4 +28,3 @@ This app should...
 5. Render component on app at route /animals
 
 ### Context
-
