@@ -34,4 +34,4 @@ This app should...
     2. dropdown for type
     3. textarea for bio
     4. checkbox for asleep
-    5. onSubmit console.log(newAnimal) redirect to '/'
+    5. onSubmit add animal to context, redirect to '/'

@@ -1,17 +1,40 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
+import { useHistory } from 'react-router-dom';
 import { useAnimals } from '../../context/AnimalContext';
 
 const AddAnimal = () => {
+    const { animalTypes, animals, setAnimals } = useAnimals();
     const [name, setName] = useState('');
-    const [type, setType] = useState('');
+    const [type, setType] = useState(animalTypes[0]);
     const [bio, setBio] = useState('');
     const [asleep, setAsleep] = useState(false);
-    const { animalTypes } = useAnimals();
+    const [errors, setErrors] = useState([])
+    const history = useHistory();
+
+    useEffect(() => {
+        
+
+     },[name, bio])
+
+    const handleSubmit = (e) => {
+        e.preventDefault();
+        const newAnimal = {
+            name,
+            type,
+            bio,
+            asleep,
+        };
+
+        setAnimals([...animals, newAnimal]);
+        console.log(newAnimal);
+
+        history.push('/');
+    };
 
     return (
         <>
             <h1>Add Animal</h1>
-            <form>
+            <form onSubmit={handleSubmit}>
                 <label>
                     Name:
                     <input
@@ -48,6 +71,7 @@ const AddAnimal = () => {
                         checked={asleep}
                     />
                 </label>
+                <button type='submit'>Submit</button>
             </form>
         </>
     );
