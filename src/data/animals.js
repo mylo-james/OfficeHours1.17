@@ -37,4 +37,4 @@ export const animals = [
     },
 ];
 
-export const animalsTypes = ['cat', 'mouse', 'elephant', 'crocodile'];
+export const animalTypes = ['cat', 'mouse', 'elephant', 'crocodile'];

@@ -27,4 +27,11 @@ This app should...
 4. Loop through the animals to display them on the page.
 5. Render component on app at route /animals
 
-### Context
+### Add Animals
+
+1. Form that will...
+    1. text input for name
+    2. dropdown for type
+    3. textarea for bio
+    4. checkbox for asleep
+    5. onSubmit console.log(newAnimal) redirect to '/'

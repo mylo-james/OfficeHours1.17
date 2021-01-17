@@ -7,7 +7,10 @@
     Create custom hook - grab info from file cab 
 */
 import { createContext, useState, useContext } from 'react';
-import { animals as animalData } from '../data/animals';
+import {
+    animals as animalData,
+    animalTypes as animalTypesData,
+} from '../data/animals';
 
 const animalContext = createContext();
 
@@ -15,10 +18,12 @@ export const useAnimals = () => useContext(animalContext);
 
 const AnimalContextProvider = (props) => {
     const [animals, setAnimals] = useState(animalData);
-
+    const [animalTypes, setAnimalTypes] = useState(animalTypesData);
     return (
         <>
-            <animalContext.Provider value={{ animals, setAnimals }}>
+            <animalContext.Provider
+                value={{ animals, setAnimals, animalTypes, setAnimalTypes }}
+            >
                 {props.children}
             </animalContext.Provider>
         </>
