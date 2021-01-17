@@ -1,7 +1,10 @@
+import AllAnimals from './components/AllAnimals';
 function App() {
-  return (
-    <h1>Hello from App</h1>
-  );
+    return (
+        <>
+            <AllAnimals />
+        </>
+    );
 }
 
 export default App;
